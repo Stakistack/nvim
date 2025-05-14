@@ -1,14 +1,14 @@
 require("mason").setup({})
-require("mason-lspconfig").setup({
-    handlers = {
-        function(server_name)
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
-            require("lspconfig")[server_name].setup({
-                capabilities = capabilities
-            })
-        end,
-    },
-})
+-- require("mason-lspconfig").setup({
+--     handlers = {
+--         function(server_name)
+--             local capabilities = require("cmp_nvim_lsp").default_capabilities()
+--             require("lspconfig")[server_name].setup({
+--                 capabilities = capabilities
+--             })
+--         end,
+--     },
+-- })
 
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
